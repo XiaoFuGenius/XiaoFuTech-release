@@ -16,6 +16,11 @@ FOUNDATION_EXPORT const unsigned char XiaoFuTechVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <XiaoFuTech/PublicHeader.h>
 
+/**
+ XiaoFuTech版本号
+ 更新时间：2018.11.06 11:56
+ */
+#define XiaoFuTech_SDK_VERSION @"1.0.1"
 
 #import "XFMarcro.h"
 #import "XFCategory.h"
