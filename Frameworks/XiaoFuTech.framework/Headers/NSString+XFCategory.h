@@ -18,22 +18,33 @@
 - (BOOL)xf_IsMatchRegEx:(NSString *)regEx;
 
 /**
- SHA-256加密
+ AES128 加密 - 对称加密算法
+ */
+- (NSString *)xf_EncryptAES128;
++ (NSString *)XF_EncryptAES128:(NSData *)sourceData;
+
+/**
+ AES128 解密 - 对称加密算法
+ */
+- (NSString *)xf_DecryptAES128;
++ (NSString *)XF_DecryptAES128:(NSData *)secretData;
+
+/**
+ SHA-256加密 - 单向加密算法
  @return 已加密字符串
  */
 - (NSString *)xf_EncryptSHA256;
 + (NSString *)XF_EncryptSHA256:(NSData *)keyData;
 
 /**
- SHA-1加密
+ SHA-1加密 - 单向加密算法
  @return 已加密字符串
  */
 - (NSString *)xf_EncryptSHA1;
 + (NSString *)XF_EncryptSHA1:(NSData *)keyData;
 
-
 /**
- MD5加密
+ MD5加密 - 单向加密算法
  @return 已加密字符串
  */
 - (NSString *)xf_EncryptMD5;
@@ -46,6 +57,7 @@
  ps.无符号整型值的取值范围：16位机（0 ~ 2^16，0xffff，65535），32位机（0 ~ 2^32，0xffffffff，4294967295）
  */
 - (unsigned int)xf_HexStringToUnsignedInt;
+
 
 - (int)XF_GetNumberOfCharactersWithCRNum:(int)crNum;
 

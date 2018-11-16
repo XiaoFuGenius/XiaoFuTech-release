@@ -1,6 +1,13 @@
+# 常用命令：pod
+# 本地 验证 podspec 文件：$ pod lib lint
+# 本地&远程 验证 podspec 文件：$ pod spec lint
+# 移除验证 podspec 文件时产生的一般警告：$ pod lib lint --allow-warnings
+# subspec 依赖中的第三方库包含.a文件：$ pod lib lint --use-libraries
+# 添加&更新 私有repo 中的 podspec 文件：pod repo push [私有repo] [.podspec文件路径]
+
 Pod::Spec.new do |s|
   s.name         = "XiaoFuTech-release" 		# 项目名称
-  s.version      = "1.0.1" 		# 版本号 与 你仓库的 标签号 对应
+  s.version      = "1.0.2" 		# 版本号 与 你仓库的 标签号 对应
   s.license      = "MIT" 	 # 开源证书
   s.summary      = "iOS 快捷开发工具包 XiaoFuTech.framework for Release." 	# 项目简介
   s.deprecated = false

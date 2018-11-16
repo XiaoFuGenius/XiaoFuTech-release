@@ -18,9 +18,9 @@ FOUNDATION_EXPORT const unsigned char XiaoFuTechVersionString[];
 
 /**
  XiaoFuTech版本号
- 更新时间：2018.11.06 11:56
+ 更新时间：2018.11.13 22:45
  */
-#define XiaoFuTech_SDK_VERSION @"1.0.1"
+#define XiaoFuTech_SDK_VERSION @"1.0.2"
 
 #import "XFMarcro.h"
 #import "XFCategory.h"
