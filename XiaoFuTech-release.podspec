@@ -49,6 +49,7 @@ Pod::Spec.new do |s|
   s.subspec 'QQ_MTA' do |mta|
     mta.ios.deployment_target = '8.0'
     mta.source_files = 'CapacityExpansion/XF3rdEncapsulation/QQ_MTA/*.{h,m}'
+    mta.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/QQ_MTA/*.h'
     mta.dependency 'QQ_MTA/AutoTrack'
   end
   
@@ -56,6 +57,7 @@ Pod::Spec.new do |s|
   s.subspec 'Bugly' do |bugly|
     bugly.ios.deployment_target = '8.0'
     bugly.source_files = 'CapacityExpansion/XF3rdEncapsulation/Bugly/*.{h,m}'
+    bugly.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/Bugly/*.h'
     bugly.dependency 'Bugly'
   end
   
@@ -63,6 +65,7 @@ Pod::Spec.new do |s|
   s.subspec 'AFNetworking' do |afNet|
     afNet.ios.deployment_target = '8.0'
     afNet.source_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.{h,m}'
+    afNet.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.h'
     afNet.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
     afNet.dependency 'AFNetworking', '~> 3.0'
   end
@@ -71,6 +74,7 @@ Pod::Spec.new do |s|
   s.subspec 'WechatOpenSDK' do |wechat|
     wechat.ios.deployment_target = '8.0'
     wechat.source_files = 'CapacityExpansion/XF3rdEncapsulation/WechatOpenSDK/*.{h,m}'
+    wechat.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/WechatOpenSDK/*.h'
     wechat.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
     wechat.dependency 'XiaoFuTech-release/AFNetworking'
     wechat.dependency 'WechatOpenSDK'
@@ -80,6 +84,7 @@ Pod::Spec.new do |s|
   s.subspec 'Weibo_SDK' do |weibo|
     weibo.ios.deployment_target = '8.0'
     weibo.source_files = 'CapacityExpansion/XF3rdEncapsulation/Weibo_SDK/*.{h,m}'
+    weibo.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/Weibo_SDK/*.h'
     weibo.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
     weibo.dependency 'XiaoFuTech-release/AFNetworking'
     weibo.dependency 'Weibo_SDK'
@@ -89,6 +94,7 @@ Pod::Spec.new do |s|
   s.subspec 'AlicloudPush' do |alicloudpush|
     alicloudpush.ios.deployment_target = '8.0'
     alicloudpush.source_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.{h,m}'
+    alicloudpush.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.h'
     alicloudpush.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
     alicloudpush.dependency 'AlicloudPush', '~> 1.9.8'
   end
