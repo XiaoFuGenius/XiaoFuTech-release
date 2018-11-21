@@ -33,6 +33,8 @@
 #import "XFCarouselControls.h"
 
 ///XFCustomHelper
+#import "XFVideoPlayer.h"
+#import "XFSettingsBundleHelper.h"
 #import "XFAppIconHelper.h"
 #import "XFUIAdaptationHelper.h"
 #import "XFQuickHelper.h"
