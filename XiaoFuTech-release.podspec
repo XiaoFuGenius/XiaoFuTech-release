@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://github.com/XiaoFuGenius" 	# 个人主页
   
   # 子组件管理
-  s.default_subspec = ['Bugly']
+  s.default_subspec = ['AFNetworking']
 
   # 自封装 快捷开发『XFRapidCoding』
 
@@ -36,14 +36,6 @@ Pod::Spec.new do |s|
   
   
   # 第三方库封装『XF3rdEncapsulation』
-  
-  # MJRefresh
-#   s.subspec 'MJRefresh' do |mj|
-#     mj.ios.deployment_target = '8.0'
-#     mj.source_files = 'CapacityExpansion/XF3rdEncapsulation/MJRefresh/*.{h,m}'
-#     mj.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-#     mj.dependency 'MJRefresh'
-#   end
   
   # QQ_MTA
   s.subspec 'QQ_MTA' do |mta|
@@ -98,5 +90,13 @@ Pod::Spec.new do |s|
     alicloudpush.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
     alicloudpush.dependency 'AlicloudPush', '~> 1.9.8'
   end
+  
+    # MJRefresh
+#   s.subspec 'MJRefresh' do |mj|
+#     mj.ios.deployment_target = '8.0'
+#     mj.source_files = 'CapacityExpansion/XF3rdEncapsulation/MJRefresh/*.{h,m}'
+#     mj.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
+#     mj.dependency 'MJRefresh'
+#   end
 
 end
