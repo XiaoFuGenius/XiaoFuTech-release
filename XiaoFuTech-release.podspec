@@ -5,6 +5,7 @@
 # 移除验证 podspec 文件时产生的一般警告：$ pod lib lint --allow-warnings
 # 第三方库的依赖中包含.a文件：$ pod lib lint --use-libraries
 # 第三方库是私有库，需要添加源：$ pod lib lint --sources=https://github.com/CocoaPods/Specs.git,[第三方库源]
+# 以下说明超级重要！！！
 # 当前 podspec 文件验证：$ pod lib lint --sources=https://github.com/CocoaPods/Specs.git,https://github.com/aliyun/aliyun-specs.git,https://github.com/sinaweibosdk/weibo_ios_sdk.git --use-libraries --allow-warnings --verbose
 # 添加&更新 私有repo 中的 podspec 文件：pod repo push [私有repo] [.podspec文件路径]
 
@@ -27,15 +28,19 @@ Pod::Spec.new do |s|
   s.social_media_url   	= "https://github.com/XiaoFuGenius" 	# 个人主页
   
   # 子组件管理
-  s.default_subspec = ['AFNetworking']
+  s.default_subspec = ['RapidCodingTool']
 
-  # 自封装 快捷开发『XFRapidCoding』
-
+  # 自封装 快捷开发『XFRapidCodingTool』
+  # RapidCodingTool
+  s.subspec 'RapidCodingTool' do |rct|
+    rct.ios.deployment_target = '8.0'
+    rct.source_files = 'CapacityExpansion/XFRapidCodingTool/*.{h,m}'
+  end
 
   # 自封装 用户权限『XFUserRightsPool』
   
-  
   # 第三方库封装『XF3rdEncapsulation』
+  
   
   # QQ_MTA
   s.subspec 'QQ_MTA' do |mta|
