@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
     alicloudpush.source_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.{h,m}'
     alicloudpush.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.h'
     alicloudpush.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-    alicloudpush.dependency 'AlicloudPush', '~> 1.9.9'
+    alicloudpush.dependency 'AlicloudPush'
   end
   
     # MJRefresh
