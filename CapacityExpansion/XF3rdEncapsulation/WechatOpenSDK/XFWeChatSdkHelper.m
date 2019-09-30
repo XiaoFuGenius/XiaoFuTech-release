@@ -86,7 +86,8 @@ static XFWeChatSdkHelper *weChatSdkHelper = nil;
 
 #pragma mark >>> Area Z <<<
 
-+ (void)RegisterAppKey:(NSString *)appKey secret:(NSString *)secret debugEnable:(BOOL)debugEnable
++ (void)RegisterAppKey:(id)appKey secret:(id)secret
+         universalLink:(id)universalLink debugEnable:(id)debugEnable
 {
     [XFWeChatSdkHelper SharedWeChatSdkHelper].appid = appKey;
     [XFWeChatSdkHelper SharedWeChatSdkHelper].appSecret = secret;
@@ -96,7 +97,7 @@ static XFWeChatSdkHelper *weChatSdkHelper = nil;
             NSLog(@"%@", log);
         }];
     }
-    [WXApi registerApp:[XFWeChatSdkHelper SharedWeChatSdkHelper].appid];
+    [WXApi registerApp:[XFWeChatSdkHelper SharedWeChatSdkHelper].appid universalLink:universalLink];
 }
 
 + (BOOL)HandleOpenURL:(NSURL *)url
@@ -118,7 +119,7 @@ static XFWeChatSdkHelper *weChatSdkHelper = nil;
     sendReq.state = @"com.xiaofutech.JunPingAssistant.WeChatAuthState";
 
     //发送登录授权信息
-    [WXApi sendReq:sendReq];
+    [WXApi sendReq:sendReq completion:nil];
 
     //保存回调block
     [XFWeChatSdkHelper SharedWeChatSdkHelper].onResp = onResp;
@@ -150,7 +151,7 @@ static XFWeChatSdkHelper *weChatSdkHelper = nil;
     sendReq.message = mediaMsg;
 
     //发送分享信息
-    [WXApi sendReq:sendReq];
+    [WXApi sendReq:sendReq completion:nil];
 
     //保存回调block
     [XFWeChatSdkHelper SharedWeChatSdkHelper].onResp = onResp;
@@ -182,7 +183,7 @@ static XFWeChatSdkHelper *weChatSdkHelper = nil;
     sendReq.message = mediaMsg;
 
     //发送分享信息
-    [WXApi sendReq:sendReq];
+    [WXApi sendReq:sendReq completion:nil];
 
     //保存回调block
     [XFWeChatSdkHelper SharedWeChatSdkHelper].onResp = onResp;

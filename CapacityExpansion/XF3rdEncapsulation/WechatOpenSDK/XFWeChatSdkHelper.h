@@ -68,7 +68,8 @@ typedef void(^XFWeChatSdkOnResp)(XFWeChatSdkResponse status, NSDictionary *resp)
  注：pod 'WechatOpenSDK'
  注2：修改 appKey & appSecret 时，注意同步修改 URLTypes 和 AppDelegate 中的值
  */
-+ (void)RegisterAppKey:(NSString *)appKey secret:(NSString *)secret debugEnable:(BOOL)debugEnable;
++ (void)RegisterAppKey:(NSString *)appKey secret:(NSString *)secret
+         universalLink:(NSString *)universalLink debugEnable:(BOOL)debugEnable;
 
 /**
  处理微信通过URL启动App时传递的数据

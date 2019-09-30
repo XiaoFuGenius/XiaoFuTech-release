@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #define kAliPushType @".PushType" // 可选，@".Release" 或 @".Develop"
-typedef void(^XFCloudPushSdkCallback)(id res);
+typedef void (^XFCloudPushSdkCallback)(id res);
 
 @interface XFCloudPushSdkHelper : NSObject
 

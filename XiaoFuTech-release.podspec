@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name         		= "XiaoFuTech-release" 		# 项目名称
-  s.version      		= "1.0.12" 		# 版本号 与 你仓库的 标签号 对应
+  s.version      		= "1.0.13" 		# 版本号 与 你仓库的 标签号 对应
   s.license      		= "MIT" 	 # 开源证书
   s.summary      		= "iOS 快捷开发工具包 XiaoFuTech.framework for Release." 	# 项目简介
   s.deprecated 			= false
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
     afNet.source_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.{h,m}'
     afNet.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.h'
     afNet.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-    afNet.dependency 'AFNetworking', '~> 3.0'
+    afNet.dependency 'AFNetworking'
   end
   
   # WechatOpenSDK
@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
     alicloudpush.source_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.{h,m}'
     alicloudpush.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.h'
     alicloudpush.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-    alicloudpush.dependency 'AlicloudPush', '~> 1.9.9'
+    alicloudpush.dependency 'AlicloudPush'
   end
   
     # MJRefresh
